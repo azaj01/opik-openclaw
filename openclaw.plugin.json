@@ -2,6 +2,9 @@
   "id": "opik-openclaw",
   "name": "Opik",
   "description": "Export OpenClaw LLM traces to Opik",
+  "activation": {
+    "onStartup": true
+  },
   "configSchema": {
     "type": "object",
     "additionalProperties": false,

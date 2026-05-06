@@ -62,6 +62,7 @@ describe("plugin smoke", () => {
     const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
 
     expect(manifest.id).toBe("opik-openclaw");
+    expect(manifest.activation?.onStartup).toBe(true);
     expect(manifest.configSchema?.properties?.apiKey?.type).toBe("string");
     expect(manifest.configSchema?.properties?.projectName?.type).toBe("string");
     expect(manifest.uiHints?.apiKey?.sensitive).toBe(true);
